@@ -3,6 +3,7 @@ import "./rightbar.css"
 import { } from "@mui/icons-material"
 import { Users } from '../../dummyData'
 import Online from '../online/Online'
+import Home from '../../pages/home/Home'
 
 export default function Rightbar({ profile }) {
   const HomeRightBar = ()=>{
@@ -73,7 +74,7 @@ export default function Rightbar({ profile }) {
   return (
     <div className='rightbar'>
       <div className="rightbarWrapper">
-        <ProfileRightBar/>
+        {profile ? <ProfileRightBar /> : <HomeRightBar />}
       </div>
     </div>
   )
