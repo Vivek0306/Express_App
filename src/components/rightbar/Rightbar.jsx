@@ -1,6 +1,8 @@
 import React from 'react'
 import "./rightbar.css"
 import { } from "@mui/icons-material"
+import { Users } from '../../dummyData'
+import Online from '../online/Online'
 
 export default function Rightbar() {
   return (
@@ -13,34 +15,9 @@ export default function Rightbar() {
         <img className="rightbarAd" src="assets/ad.png"/>
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="assets/person/3.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">John Carter</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="assets/person/2.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">Emily Clark</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="assets/person/1.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">Brown Drak</span>
-          </li>
-          <li className="rightbarFriend">
-            <div className="rightbarProfileImgContainer">
-              <img src="assets/person/6.jpeg" className='rightbarProfileImg' alt="" />
-              <span className='rightbarOnline'></span>
-            </div>
-            <span className="rightbarUsername">Hame Orton</span>
-          </li>
+            { Users.map(u => (
+              <Online key={u.id} user={u} />
+            )) }
         </ul>
       </div>
     </div>
