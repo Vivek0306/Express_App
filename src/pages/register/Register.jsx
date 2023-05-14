@@ -1,25 +1,28 @@
-import React from 'react'
-import "./register.css"
+import "./register.css";
 
 export default function Register() {
   return (
-    <div className='login'>
+    <div className="login">
       <div className="loginWrapper">
         <div className="loginLeft">
-          <h3 className="loginLogo">BroBook</h3>
-          <span className="loginDesc">Connect with friends and the world around you on BroBook.</span>
+          <h3 className="loginLogo">Lamasocial</h3>
+          <span className="loginDesc">
+            Connect with friends and the world around you on Lamasocial.
+          </span>
         </div>
         <div className="loginRight">
           <div className="loginBox">
-            <input type="Username" placeholder='Username' className="loginInput" />
-            <input type="Email" placeholder='Email' className="loginInput" />
-            <input type="Password" placeholder='Password' className="loginInput" />
-            <input type="Password" placeholder='Confirm Password' className="loginInput" />
-            <button className='loginButton'>Sign Up</button>
-            <button className="loginRegisterButton">Log into Account</button>
+            <input placeholder="Username" className="loginInput" />
+            <input placeholder="Email" className="loginInput" />
+            <input placeholder="Password" className="loginInput" />
+            <input placeholder="Password Again" className="loginInput" />
+            <button className="loginButton">Sign Up</button>
+            <button className="loginRegisterButton">
+              Log into Account
+            </button>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
