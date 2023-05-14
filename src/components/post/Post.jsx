@@ -30,12 +30,12 @@ export default function Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              src={PF+Users.filter((u) => u.id === post?.userId)[0].profilePicture}
+              // src={PF+Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               src={PF+user.profilePicture}
               alt=""
             />
             <span className="postUsername">
-              {Users.filter((u) => u.id === post?.userId)[0].username}
+              {/* {Users.filter((u) => u.id === post?.userId)[0].username} */}
               {user.username}
             </span>
             <span className="postDate">{post.date}</span>
